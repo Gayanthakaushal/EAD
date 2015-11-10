@@ -1,0 +1,15 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name= "dashboard" extends="struts-default">
+        <action name= "submitReq"
+                class= "dashboard.Requisition"
+                method = "execute">
+            
+            <result name = "Error">/reqError.jsp</result>
+            <result name = "Success">/reqSuccess.jsp</result>
+        </action>
+    </package>
+</struts>
