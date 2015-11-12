@@ -9,14 +9,37 @@ import java.util.ArrayList;
 import static java.util.Collections.list;
 
 public class Requisition extends ActionSupport {
+    
+ public String reqId;
 
-    public String reqId;
-    public String productId;
-    public String productName;
+    
+    private String productId;
+    private String productName;
+
+   
     public int quantity;
     public String date;
     public String productionLine;
     public String authorizedBy;
+    
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+    
+public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+    
+
+   
 
     @Override
     
@@ -28,10 +51,10 @@ public class Requisition extends ActionSupport {
            
             String URL = "jdbc:mysql://localhost/dashboard";
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection(URL, "senuri", "yes");
+            conn = DriverManager.getConnection(URL, "yasas", "yes");
             
             String sql = "INSERT INTO purchaserequisition (`requisitionId`, `productId`, `productName`, `quantity`, `requiredDate`, `productLine`, `authorizedBy`)\n"
-                    + "VALUES (\"1\",\"2\",\"senuri\",45,\"3/4/2016\",\"line one\",\"senuri wijenayake\")";
+                    + "VALUES (\"2\",'"+getProductId()+"','"+productName+"','"+quantity+"','"+date+"','"+productionLine+"','" + authorizedBy + "')";
             
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.executeUpdate();
