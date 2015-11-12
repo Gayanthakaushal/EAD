@@ -62,8 +62,14 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </head>\r\n");
       out.write("\r\n");
       out.write("    <body>\r\n");
+      out.write("        <input type=\"image\" name=\"banner1\" id=\"banner1\" src=\"banner1.jpg\" align=\"middle\"/>\r\n");
       out.write("        <form action=\"submitReq\" method=\"post\" name=\"requisition\"   >\r\n");
-      out.write("            <label>Requisition Id : </label>\r\n");
+      out.write("            <label>\r\n");
+      out.write("              \r\n");
+      out.write("              <br />\r\n");
+      out.write("              <br />\r\n");
+      out.write("              <br />\r\n");
+      out.write("            Requisition Id : </label>\r\n");
       out.write("            <label id=\"guid\">1234</label> <br /><br />\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -96,13 +102,14 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <option>Dynamometer</option>\r\n");
       out.write("            </select><br /><br />\r\n");
       out.write("\r\n");
+      out.write("            ");
       if (_jspx_meth_s_textfield_5(_jspx_page_context))
         return;
       out.write(" <br /><br />\r\n");
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("         \r\n");
+      out.write("\r\n");
       out.write("\r\n");
       out.write("            <input name=\"submit\" type=\"submit\" value=\"Submit\" action=\"submitReq\"    />\r\n");
       out.write("            <input name=\"clear\" type=\"button\" value=\"Clear\" />\r\n");

@@ -9,8 +9,14 @@
     </head>
 
     <body>
+        <input type="image" name="banner1" id="banner1" src="banner1.jpg" align="middle"/>
         <form action="submitReq" method="post" name="requisition"   >
-            <label>Requisition Id : </label>
+            <label>
+              
+              <br />
+              <br />
+              <br />
+            Requisition Id : </label>
             <label id="guid">1234</label> <br /><br />
 
 
