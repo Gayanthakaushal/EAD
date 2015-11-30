@@ -1,0 +1,68 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        
+        
+        
+        
+           
+        <action name="newRequisition" class="action.RequisitionAction" method="execute">            
+            <result name="success">/www/viewExistingRequisitions.jsp</result>
+            <result name="error">/www/reqError.jsp</result>
+        </action>
+        <action name="newSupplier" class="action.SupplierAction" method="execute">            
+            <result name="success">/www/viewExistingSuppliers.jsp</result>
+            <result name="error">/www/reqError.jsp</result>
+        </action>
+
+        
+        
+        <action name="viewRequisition" class="action.RequisitionShow" method="execute">            
+            <result name="success">/www/reqSuccess.jsp</result>
+            <result name="error">/www/reqError.jsp</result>
+        </action>
+        
+        
+        <action name="addSalaryDetails" class="com.struts.action.SalaryAction">            
+            <result name="success">/www/thankyou.jsp</result>
+        </action>
+        
+        <action name="viewDetails" class="com.struts.action.TrainingAction">
+            <result name="success">/www/results.jsp</result>
+        </action>
+        <action name="deleteDetails" class="com.struts.action.DeleteAction">
+            <result name="success">/www/thankyou.jsp</result>
+        </action>
+        
+        <action name="updateDetails" class="com.struts.action.UpdateAction">
+            <result name="success">/www/thankyou.jsp</result>
+        </action>
+        <action name="updateSupplier" class="action.SupplierAction" method="updateSupplier">            
+            <result name="success">/www/reqSuccess.jsp</result>
+            <result name="error">/www/reqError.jsp</result>
+        </action> 
+      
+        
+        <action name="updateRequisition" class="action.RequisitionAction" method="updateRequisition">            
+            <result name="success">/www/viewExistingRequisitions.jsp</result>
+            <result name="error">/www/reqError.jsp</result>
+        </action>
+        
+        <action name="deleteSupplier" class="action.SupplierAction" method="deleteSupplier">            
+            <result name="success">/www/reqSuccess.jsp</result>
+            <result name="error">/www/reqError.jsp</result>
+        </action>
+        
+        
+        <action name="deleteRequisition" class="action.RequisitionAction" method="deleteRequisition">            
+            <result name="success">/www/deleteSuccess.jsp</result>
+            <result name="error">/www/reqError.jsp</result>
+        </action>
+        
+    </package>
+</struts>
